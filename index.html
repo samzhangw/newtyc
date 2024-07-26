@@ -917,7 +917,13 @@ return false;
 return false;
 }
 }
-
+    // 在視窗大小改變時檢查並調整菜單顯示
+    window.addEventListener('resize', function() {
+      const menu = document.getElementById('menu');
+      if (window.innerWidth > 768) {
+        menu.classList.remove('show');
+      }
+    });
       </script>
 
 
