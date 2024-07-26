@@ -1175,13 +1175,7 @@ function toggleSystemInfo() {
       }
     }
 
-// 在視窗大小改變時檢查並調整菜單顯示
-    window.addEventListener('resize', function() {
-      const menu = document.getElementById('menu');
-      if (window.innerWidth > 768) {
-        menu.classList.remove('show');
-      }
-    })
+
     // 頁面加載完成後的動畫效果
     document.addEventListener('DOMContentLoaded', function() {
       var elements = document.querySelectorAll('.fade-in-up');
@@ -1192,7 +1186,20 @@ function toggleSystemInfo() {
         }, index * 100);
       });
     });   
-        
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+
+    // 當用戶滾動頁面時，控制浮動按鈕的顯示
+    window.onscroll = function() {
+      const floatingButton = document.querySelector('.floating-button');
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        floatingButton.style.display = "block";
+      } else {
+        floatingButton.style.display = "none";
+      }
+    }; 
         
         // 防止複製
     document.addEventListener('copy', function(e) {
@@ -1218,8 +1225,4 @@ function toggleSystemInfo() {
       return false;
     };
       </script>
-
-
-    
-    
     </body></html>
