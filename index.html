@@ -1175,7 +1175,12 @@ function toggleSystemInfo() {
       }
     }
 
-
+// 在視窗大小改變時檢查並調整菜單顯示
+    window.addEventListener('resize', function() {
+      const menu = document.getElementById('menu');
+      if (window.innerWidth > 768) {
+        menu.classList.remove('show');
+      }
 
     // 頁面加載完成後的動畫效果
     document.addEventListener('DOMContentLoaded', function() {
@@ -1186,7 +1191,10 @@ function toggleSystemInfo() {
           element.style.transform = 'translateY(0)';
         }, index * 100);
       });
-    });       // 防止複製
+    });   
+        
+        
+        // 防止複製
     document.addEventListener('copy', function(e) {
       e.preventDefault();
       return false;
