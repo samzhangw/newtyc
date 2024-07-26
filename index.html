@@ -1,4 +1,4 @@
-<html><head><title>桃聯區會考落點分析</title>
+<html><head><title>桃聯區會考落點分析 - 創新界面</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-3350304014189563">
@@ -6,18 +6,16 @@
   <meta name="keywords" content="桃聯區, 會考, 落點分析, 教育, 學校, 武陵高中, 中壢高中, 內壢高中, 平鎮高中, 大園高中, 永豐高中, 南崁高中, 振聲高中, 楊梅高中, 治平高中, 新興高中, 關西高中, 大溪高中">
   <meta name="author" content="桃聯區教育局">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
     
     :root {
-      --primary-color: #6C5CE7;
-      --secondary-color: #00CEC9;
-      --background-color: #F0F3F7;
-      --text-color: #2D3436;
-      --card-background: #FFFFFF;
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --accent-color: #e74c3c;
+      --background-color: #f4f6f9;
+      --text-color: #2c3e50;
+      --card-background: #ffffff;
       --shadow-color: rgba(0, 0, 0, 0.1);
-      --accent-color: #FD79A8;
-      --gradient-start: #6C5CE7;
-      --gradient-end: #00CEC9;
     }
   
     * {
@@ -27,7 +25,7 @@
     }
   
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Noto Sans TC', sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
@@ -42,10 +40,10 @@
     }
   
     header {
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
       padding: 20px 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px var(--shadow-color);
     }
   
     .header-content {
@@ -59,6 +57,7 @@
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     }
   
     nav ul {
@@ -84,7 +83,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: white;
+      background-color: var(--accent-color);
       bottom: 0;
       left: 0;
       transform: scaleX(0);
@@ -98,42 +97,34 @@
     }
   
     main {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
       gap: 30px;
       margin: 40px 0;
     }
   
-    .card {
-      background: var(--card-background);
-      border-radius: 20px;
-      box-shadow: 0 10px 20px var(--shadow-color);
-      padding: 30px;
-      transition: all 0.3s ease;
-      overflow: hidden;
-      position: relative;
-      margin-bottom: 30px;
+    .main-content {
+      flex: 2;
+      min-width: 300px;
     }
   
-    .card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        to bottom right,
-        rgba(108, 92, 231, 0.1),
-        rgba(0, 206, 201, 0.1)
-      );
-      transform: rotate(30deg);
-      pointer-events: none;
+    .sidebar {
+      flex: 1;
+      min-width: 250px;
+    }
+  
+    .card {
+      background: var(--card-background);
+      border-radius: 15px;
+      box-shadow: 0 10px 20px var(--shadow-color);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
     }
   
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px var(--shadow-color);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px var(--shadow-color);
     }
   
     h2 {
@@ -151,11 +142,12 @@
       left: 0;
       width: 50px;
       height: 3px;
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     }
   
     .form-group {
       margin-bottom: 25px;
+      position: relative;
     }
   
     label {
@@ -163,11 +155,12 @@
       margin-bottom: 8px;
       font-weight: 500;
       color: var(--text-color);
+      transition: all 0.3s ease;
     }
   
     select, input[type="text"] {
       width: 100%;
-      padding: 12px;
+      padding: 12px 15px;
       border: 2px solid #e0e0e0;
       border-radius: 8px;
       font-size: 1rem;
@@ -178,12 +171,12 @@
     select:focus, input[type="text"]:focus {
       outline: none;
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
       background-color: white;
     }
   
     button {
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
       border: none;
       padding: 12px 24px;
@@ -195,11 +188,13 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
     }
   
     button:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     }
   
     #results {
@@ -208,7 +203,7 @@
   
     .result-item {
       background-color: #f9f9f9;
-      border-left: 4px solid var(--primary-color);
+      border-left: 4px solid var(--accent-color);
       padding: 15px;
       margin-bottom: 15px;
       border-radius: 5px;
@@ -221,7 +216,7 @@
     }
   
     footer {
-      background-color: #2D3436;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
       text-align: center;
       padding: 30px 0;
@@ -232,7 +227,7 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      background: var(--accent-color);
       color: white;
       width: 60px;
       height: 60px;
@@ -247,11 +242,11 @@
     }
   
     .floating-button:hover {
-      transform: translateY(-5px) rotate(360deg);
+      transform: scale(1.1);
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      background: var(--primary-color);
     }
   
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -262,7 +257,6 @@
       height: 100%;
       overflow: auto;
       background-color: rgba(0,0,0,0.5);
-      animation: fadeIn 0.3s ease-out;
     }
   
     .modal-content {
@@ -272,17 +266,13 @@
       border: 1px solid #888;
       width: 80%;
       max-width: 600px;
-      border-radius: 20px;
+      border-radius: 15px;
       box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-      position: relative;
-      animation: slideIn 0.3s ease-out;
     }
   
     .close {
       color: #aaa;
-      position: absolute;
-      top: 20px;
-      right: 30px;
+      float: right;
       font-size: 28px;
       font-weight: bold;
       transition: all 0.3s ease;
@@ -295,17 +285,6 @@
       cursor: pointer;
     }
   
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  
-    @keyframes slideIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  
-    /* Mobile Styles */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
@@ -322,7 +301,7 @@
       }
 
       main {
-        grid-template-columns: 1fr;
+        flex-direction: column;
       }
 
       .card {
@@ -352,7 +331,6 @@
       }
     }
 
-    /* Hamburger Menu for Mobile */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -386,9 +364,254 @@
         margin: 10px 0;
       }
     }
+
+    /* 新增動畫效果 */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.5s ease-out;
+    }
+
+    /* 滾動條樣式 */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+
+    /* 新增關於系統資訊的樣式 */
+    .system-info {
+      cursor: pointer;
+    }
+
+    .system-info-content {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .system-info-content.show {
+      display: block;
+    }
+
+    /* 新增查看更多按鈕樣式 */
+    .view-more-btn {
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .view-more-btn:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* 新增橫幅公告樣式 */
+    .announcement-banner {
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+      position: relative;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .announcement-banner a {
+      color: #2c3e50;
+      text-decoration: underline;
+      transition: all 0.3s ease;
+    }
+
+    .announcement-banner a:hover {
+      color: #34495e;
+      text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+
+    /* 新增卡片陰影效果 */
+    .card {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .card:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
+    }
+
+    /* 美化表單元素 */
+    select, input[type="text"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 98%;
+      background-position-y: 50%;
+    }
+
+    /* 美化按鈕 */
+    button {
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, .5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 1;
+      }
+      20% {
+        transform: scale(25, 25);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(40, 40);
+      }
+    }
+
+    button:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+
+    /* 美化結果項目 */
+    .result-item {
+      border-left: 4px solid var(--accent-color);
+      background: linear-gradient(to right, rgba(231, 76, 60, 0.1), rgba(255, 255, 255, 0));
+      transition: all 0.3s ease;
+    }
+
+    .result-item:hover {
+      border-left-width: 8px;
+    }
+
+    /* 添加頁面切換動畫 */
+    @keyframes pageTransition {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      animation: pageTransition 0.5s ease-out;
+    }
+
+    /* 新增hover效果 */
+    .card h2:hover,
+    .form-group label:hover,
+    button:hover,
+    .floating-button:hover,
+    .view-more-btn:hover {
+      transform: translateY(-2px);
+      transition: transform 0.3s ease;
+    }
+
+    /* 改善可讀性 */
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    /* 添加圓角和陰影到圖標 */
+    .fas {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* 美化footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      padding: 40px 0;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+
+    /* 添加響應式設計 */
+    @media (max-width: 480px) {
+      .card {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      select, input[type="text"] {
+        font-size: 0.9rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
+
+</head>
+<body>
+  <div class="announcement-banner">
+    如需獲取邀請碼，請幫我們填寫<a href="https://docs.google.com/forms/d/e/1FAIpQLSddIuu-L6K4pL60axx8LhyDdtXY_HUDRgpsuLsozVWo_dLGKA/viewform" target="_blank">表單</a>
+  </div>
   <header>
     <div class="container">
       <div class="header-content">
@@ -537,19 +760,24 @@
     </div>
 
     <div class="sidebar">
-      <div class="card">
-        <h2><i class="fas fa-info-circle"></i> 關於系統</h2>
+      <div class="card fade-in-up">
+        <h2 class="system-info" onclick="toggleSystemInfo()"><i class="fas fa-info-circle"></i> 關於系統</h2>
         <p>桃聯區會考落點分析系統是一個專為桃園市國中應屆畢業生設計的工具。本系統旨在幫助學生根據會考成績分析可能的錄取學校，為升學決策提供參考依據。</p>
-        <h3>系統特色：</h3>
-        <ul>
-          <li>即時分析：根據最新的會考成績和招生資訊進行分析</li>
-          <li>全面覆蓋：包含桃園市區內所有公私立高中職</li>
-          <li>多維度篩選：可依學校屬性、類型和職業群別進行篩選</li>
-        </ul>
-        <p>使用邀請碼即可開始您的分析之旅。我們致力於為每一位學生提供最有價值的升學參考信息。</p>
-        <a href="https://forms.gle/ZKW3W58gcbQW3vdX9" target="_blank" class="button">
-          <i class="fas fa-link"></i> 獲取邀請碼
-        </a>
+        <div class="system-info-content">
+          <h3>系統特色：</h3>
+          <ul>
+            <li><i class="fas fa-clock"></i> 即時分析：根據最新的會考成績和招生資訊進行分析</li>
+            <li><i class="fas fa-map"></i> 全面覆蓋：包含桃園市區內所有公私立高中職</li>
+            <li><i class="fas fa-filter"></i> 多維度篩選：可依學校屬性、類型和職業群別進行篩選</li>
+            <li><i class="fas fa-user-check"></i> 個人化推薦：根據個人成績給出個性化的落點建議</li>
+            <li><i class="fas fa-chart-line"></i> 歷史數據支持：利用往年錄取數據，提高預測準確性</li>
+          </ul>
+          <p>使用邀請碼即可開始您的分析之旅。我們致力於為每一位學生提供最精確、最有價值的升學參考信息。</p>
+          <a href="https://forms.gle/ZKW3W58gcbQW3vdX9" target="_blank" class="button">
+            <i class="fas fa-link"></i> 獲取邀請碼
+          </a>
+        </div>
+        <button class="view-more-btn" onclick="toggleSystemInfo()">查看更多 <i class="fas fa-chevron-down"></i></button>
       </div>
 
       <div class="card">
@@ -917,37 +1145,54 @@ return false;
 return false;
 }
 }
-function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.classList.toggle('show');
+function toggleSystemInfo() {
+      var content = document.querySelector('.system-info-content');
+      var btn = document.querySelector('.view-more-btn');
+      content.classList.toggle('show');
+      if (content.classList.contains('show')) {
+        btn.innerHTML = '收起 <i class="fas fa-chevron-up"></i>';
+      } else {
+        btn.innerHTML = '查看更多 <i class="fas fa-chevron-down"></i>';
+      }
     }
 
-    // 當用戶滾動頁面時，控制浮動按鈕的顯示
-    window.onscroll = function() {
-      const floatingButton = document.querySelector('.floating-button');
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        floatingButton.style.display = "block";
-      } else {
-        floatingButton.style.display = "none";
-      }
-    };
+    function showDisclaimer() {
+      var modal = document.getElementById("disclaimerModal");
+      modal.style.display = "block";
+    }
 
     // 關閉模態框
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      var modal = document.getElementById("disclaimerModal");
+      modal.style.display = "none";
+    }
+
+    // 點擊模態框外部關閉
     window.onclick = function(event) {
-      const modal = document.getElementById('disclaimerModal');
+      var modal = document.getElementById("disclaimerModal");
       if (event.target == modal) {
         modal.style.display = "none";
       }
     }
 
-    // 在視窗大小改變時檢查並調整菜單顯示
-    window.addEventListener('resize', function() {
-      const menu = document.getElementById('menu');
-      if (window.innerWidth > 768) {
-        menu.classList.remove('show');
-      }
-    });
-                // 防止複製
+    function analyzeScores() {
+      // 這裡需要實現實際的成績分析邏輯
+      var results = document.getElementById("results");
+      results.innerHTML = "<p>分析結果將在這裡顯示。</p>";
+      // 可以根據實際情況添加更多的分析邏輯和結果展示
+    }
+
+    // 頁面加載完成後的動畫效果
+    document.addEventListener('DOMContentLoaded', function() {
+      var elements = document.querySelectorAll('.fade-in-up');
+      elements.forEach(function(element, index) {
+        setTimeout(function() {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });       // 防止複製
     document.addEventListener('copy', function(e) {
       e.preventDefault();
       return false;
