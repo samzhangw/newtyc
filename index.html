@@ -982,7 +982,7 @@
           const totalPoints = scorePoints[chinese] + scorePoints[english] + scorePoints[math] + scorePoints[science] + scorePoints[social] + compositionPoints[composition];
           const totalCredits = creditPoints[chinese] + creditPoints[english] + creditPoints[math] + creditPoints[science] + creditPoints[social];
     
-          let results = `<h2><i class="fas fa-clipboard-check icon"></i>分析結果</h2>
+          let results = `
                          <p class="result-item"><i class="fas fa-star icon"></i>總積分：${totalPoints}</p>
                          <p class="result-item"><i class="fas fa-award icon"></i>總積點：${totalCredits}</p>`;
     
@@ -1175,6 +1175,7 @@ function toggleSystemInfo() {
         modal.style.display = "none";
       }
     }
+
 
 
     // 頁面加載完成後的動畫效果
