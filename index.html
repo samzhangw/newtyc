@@ -1221,17 +1221,6 @@ function toggleSystemInfo() {
     document.onselectstart = function() {
       return false;
     };
-            function closeDisclaimer() {
-      var modal = document.getElementById('disclaimerModal');
-      modal.style.display = 'none';
-    }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      var modal = document.getElementById('disclaimerModal');
-      if (event.target == modal) {
-        closeDisclaimer();
-      }
-    }
       </script>
     </body></html>
